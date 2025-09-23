@@ -1,0 +1,197 @@
+:root
+{
+    --button_width: 35%;
+    --image_width: 140px;
+}
+
+body
+{
+    background-image: url("../imagens/bg-desktop.jpg");
+    background-size: cover;    
+    background-repeat: no-repeat; 
+    background-position: center; 
+    height: 100vh;              
+    margin: 0;
+}
+
+.yako-foto img
+{
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 100%;
+    border: 2px solid #3cbd00;
+    width: var(--image_width);
+    height: auto;
+}
+
+.yako-foto p
+{
+    margin-top: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+.yako-foto p.ativa
+{
+    margin-top: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+}
+
+ul li:hover
+{
+    background-color: rgba(255, 255, 255, 0.185);
+    outline: none;
+    transform: scale(120%);
+    text-decoration:none;
+}
+
+ul li {
+  background: transparent;     
+    border: 2px solid white;   
+    color: white;            
+    padding: 10px 20px;               
+    border-radius: 10px;            
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: var(--button_width);
+}
+
+
+
+
+
+
+
+
+
+.toogle
+{
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+body *{
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+/* esconde o checkbox padrão */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* estilo da trilha */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #202020;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+/* bolinha do meio */
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 0px; /* meio */
+  bottom: 3px;
+  background-color: rgb(255, 255, 255);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+
+
+/* quando estiver checado */
+input:checked + .slider {
+  background-color: #e4e4e4;
+}
+
+/* move a bolinha para a direita */
+input:checked + .slider::before {
+
+  transform: translateX(36px);
+  background-color: #202020;
+  .yako-foto p{
+    color: black;
+  }
+
+  }
+
+body.modo-claro {
+    color: black;
+}
+
+.modo-claro footer{
+  color: black;
+}
+
+body.modo-claro .yako-foto p {
+    color: black;
+}
+
+body.modo-claro .yako-foto img {
+  border-color: rgb(152, 23, 192);
+}
+
+body.modo-claro ul li {
+    color: black;
+    border-color: black;
+}
+
+body.modo-claro ul li a{
+    color: black;
+    border-color: black;
+}
+
+body.modo-claro ul li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+footer{
+    text-align: center;
+    color: white;
+    margin-top: 38vh;
+}
+
+/* Na versão de celular*/
+
+@media(max-width: 500px){
+
+    :root
+    {
+        --button_width: 80%;
+        --image_width: 100px;
+    }
+
+}
+
