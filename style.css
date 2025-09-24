@@ -9,9 +9,18 @@ body
     background-image: url("../imagens/bg-desktop.jpg");
     background-size: cover;    
     background-repeat: no-repeat; 
-    background-position: center; 
-    height: 100vh;              
+    background-position: center;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 29% 30% 40%;
+    gap: 50px;
     margin: 0;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 .yako-foto img
@@ -180,7 +189,9 @@ body.modo-claro ul li:hover {
 footer{
     text-align: center;
     color: white;
-    margin-top: 38vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Na versão de celular*/
